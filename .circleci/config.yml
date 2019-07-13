@@ -23,4 +23,4 @@ jobs:
 
       # specify any bash command here prefixed with `run: `
       - run: go get -v -t -d ./...
-      - run: OBJETS=$(find -name "*.go") && for o in $OBJETS; do echo ">>>>>>>>>>> run $o"; go run $o; done
+      - run: sh .circleci/runall.sh
